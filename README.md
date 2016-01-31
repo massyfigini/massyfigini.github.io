@@ -1,3 +1,2 @@
-GitHub address for this site:
+View the website at [http://massyfigini.github.io](http://massyfigini.github.io).
 
-https:\\massyfigini.github.io
