@@ -69,8 +69,12 @@
 	}
 
 	body {
-		background: #fff;
-		overflow: hidden;
+		height: 100%;
+		background: #348cb2 url("images/background80.png") bottom left;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
 	}
 
 		body.loading * {
@@ -216,9 +220,9 @@ COMMENTATO PERCHE' SOSTITUITO CON TESTO INDIPENDENTE "CONTENT"
 		-moz-transform: translate3d(0,0,0);
 		-webkit-transform: translate3d(0,0,0);
 		-ms-transform: translate3d(0,0,0);
-		transform: translate3d(0,0,0);*/
+		transform: translate3d(0,0,0);
 	
-	/* Set your background with this */
+	/* Set your background with this 
 
 		/*background: #348cb2 url("images/background80.png") no-repeat center center fixed;
 		background-color: #2B2B2B;
@@ -235,17 +239,17 @@ COMMENTATO PERCHE' SOSTITUITO CON TESTO INDIPENDENTE "CONTENT"
 		left: 0;
 		opacity: 1;
 		position: fixed;
-		top: 0;*/
+		top: 0;
 
  		position: absolute; 
   		top: 0; 
   		left: 0; 
 	
-  		/* Preserve aspet ratio */
+  		/* Preserve aspet ratio 
   		min-width: 100%;
   		max-width: 110%;
   		min-height: 100%;
-  		max-height: 110%;
+  		max-height: 110%;*/
 
 	}
 
