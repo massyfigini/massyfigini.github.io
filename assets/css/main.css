@@ -72,13 +72,11 @@
 		/*background: #fff;
 		overflow: hidden;*/
 		height: 100%;
-		background: #348cb2 url("images/Background90.png") bottom left;
+		background: #2B2B2B url("images/Background90.png") bottom left;
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;
-
-
 	}
 
 		body.loading * {
