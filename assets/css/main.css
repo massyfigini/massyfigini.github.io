@@ -741,7 +741,7 @@ COMMENTATO PERCHE' SOSTITUITO CON TESTO INDIPENDENTE "CONTENT"
 			MASSY: 
 			AGGIUNTO CARATTERE PER FOOTER
 			*/
-			#footer h5 {
+		#footer h5 {
 
 			font-size: 0.7em;
 			opacity: 0.2;
@@ -1022,6 +1022,15 @@ COMMENTATO PERCHE' SOSTITUITO CON TESTO INDIPENDENTE "CONTENT"
 /* Mobile (Portrait) */
 
 	@media screen and (max-width: 480px) {
+		
+		/*
+		MASSY: 
+		NIENTE FOOTER SU TEL
+		*/
+		
+		#footer h5 {
+			display none;
+		}
 
 		/* BG */
 
