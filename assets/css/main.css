@@ -504,12 +504,10 @@ COMMENTATO PERCHE' SOSTITUITO CON TESTO INDIPENDENTE "CONTENT"
 	}
 
 	#header {
-		/* MASSY: GESTIONE ANIMAZIONE HEADER*/
-		-moz-animation: header 1s 1.25s forwards;
-		-webkit-animation: header 1s 1.25s forwards;
-		-ms-animation: header 1s 1.25s forwards;
-		animation: header 1s 1.25s forwards;
-		
+		-moz-animation: header 1s 2.25s forwards;
+		-webkit-animation: header 1s 2.25s forwards;
+		-ms-animation: header 1s 2.25s forwards;
+		animation: header 2s 2.25s forwards;
 		-moz-backface-visibility: hidden;
 		-webkit-backface-visibility: hidden;
 		-ms-backface-visibility: hidden;
@@ -592,10 +590,10 @@ COMMENTATO PERCHE' SOSTITUITO CON TESTO INDIPENDENTE "CONTENT"
 				}
 
 				#header nav li:nth-child(2) {
-					-moz-animation-delay: 2.75s;
-					-webkit-animation-delay: 2.75s;
-					-ms-animation-delay: 2.75s;
-					animation-delay: 2.75s;
+					-moz-animation-delay: 1.75s;
+					-webkit-animation-delay: 1.75s;
+					-ms-animation-delay: 1.75s;
+					animation-delay: 1.75s;
 				}
 
 				#header nav li:nth-child(3) {
