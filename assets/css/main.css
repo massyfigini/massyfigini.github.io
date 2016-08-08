@@ -504,10 +504,12 @@ COMMENTATO PERCHE' SOSTITUITO CON TESTO INDIPENDENTE "CONTENT"
 	}
 
 	#header {
-		-moz-animation: header 1s 2.25s forwards;
-		-webkit-animation: header 1s 2.25s forwards;
-		-ms-animation: header 1s 2.25s forwards;
-		animation: header 1s 2.25s forwards;
+		/* MASSY: GESTIONE ANIMAZIONE HEADER*/
+		-moz-animation: header 1s 1.25s forwards;
+		-webkit-animation: header 1s 1.25s forwards;
+		-ms-animation: header 1s 1.25s forwards;
+		animation: header 1s 1.25s forwards;
+		
 		-moz-backface-visibility: hidden;
 		-webkit-backface-visibility: hidden;
 		-ms-backface-visibility: hidden;
