@@ -189,14 +189,15 @@ COMMENTATO PERCHE' SOSTITUITO CON TESTO INDIPENDENTE "CONTENT"
 
 		100% {
 			opacity: 1;
+			background: #000000 url("images/rainbow.gif") bottom left;
 		}
 	}
 
 	#wrapper {
-		-moz-animation: wrapper 3s forwards;
-		-webkit-animation: wrapper 3s forwards;
-		-ms-animation: wrapper 3s forwards;
-		animation: wrapper 3s forwards;
+		-moz-animation: wrapper 6s forwards;
+		-webkit-animation: wrapper 6s forwards;
+		-ms-animation: wrapper 6s forwards;
+		animation: wrapper 6s forwards;
 		height: 100%;
 		left: 0;
 		opacity: 0;
