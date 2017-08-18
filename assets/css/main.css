@@ -119,7 +119,7 @@
 
 		}
 
-/* AGGIUNTO DA MASSY: GESTIONE ETICHETTE ICONE
+/* GESTIONE ETICHETTE ICONE
 COMMENTATO PERCHE' SOSTITUITO CON TESTO INDIPENDENTE "CONTENT"
 		.icon > .label:before 
 			display:none;
@@ -426,7 +426,7 @@ COMMENTATO PERCHE' SOSTITUITO CON TESTO INDIPENDENTE "CONTENT"
 		}
 	}
 
-/* MASSY: gestione animazioni icone*/
+/* gestione animazioni icone*/
 	@-moz-keyframes nav-icons {
 		0% {
 			-moz-transform: translate3d(0,1em,0);
@@ -525,30 +525,27 @@ COMMENTATO PERCHE' SOSTITUITO CON TESTO INDIPENDENTE "CONTENT"
 		#header h1 {
 			font-size: 4.35em;
 			/*
-			MASSY:
 			font-weight é il grassetto ma semplicemente fino a 499 non c'è, da 500 c'è...
 			*/
 			font-weight: 900;
 			/*
-			MASSY:
 			questo cambia la distanza tra i caratteri
 			letter-spacing: -0.35em;
 			*/
 
-			/*MASSY: distanzia Massimiliano Figini da Data Scientist, spostato in "header p" per distanziare anche loghi
+			/*distanzia Massimiliano Figini da Data Scientist, spostato in "header p" per distanziare anche loghi
 			line-height: 10em;*/
 		}
 
 		#header p {
 			/*
-			MASSY: 
 			METTENDO SOLO "DATA SCIENTIST" E NON ALTRO INGRANDISCO UN PO' IL CARATTERE
 			font-size: 1.25em;
 			*/
 			font-size: 2.25em;
 			margin: 0.75em 0 0.25em 0;
 			opacity: 1;
-			/*MASSY: aggiunto: distanzia Data Scientist da nome e da loghi*/
+			/*aggiunto: distanzia Data Scientist da nome e da loghi*/
 			line-height: 3.5em;
 		}
 
@@ -674,7 +671,7 @@ COMMENTATO PERCHE' SOSTITUITO CON TESTO INDIPENDENTE "CONTENT"
 
 				#header nav a:hover {
 					font-size: 1.05em;
-					/*MASSY: aggiunto per gestione etichette*/
+					/*aggiunto per gestione etichette*/
   					color: white;
 				}
 
@@ -693,7 +690,7 @@ COMMENTATO PERCHE' SOSTITUITO CON TESTO INDIPENDENTE "CONTENT"
 						color: #fff;
 					}
 
-				/*AGGIUNTO DA MASSY PER GESTIONE ETICHETTE DELLE ICONE:*/
+				/*AGGIUNTO PER GESTIONE ETICHETTE DELLE ICONE:*/
 				#header nav a span {
   					/*color: #2B2B2B;
   					display:none;*/
@@ -715,14 +712,13 @@ COMMENTATO PERCHE' SOSTITUITO CON TESTO INDIPENDENTE "CONTENT"
 
 	#footer {
 		/*
-		MASSY:
 		COMMENTATO SFONDO DIVERSO DAL RESTO DELLA PAGINA
 		background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%);
 		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%);
 		background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%);
 		background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%);
 		*/
-		/* MASSY: gestione animazioni footer*/
+		/* gestione animazioni footer*/
 		 -moz-animation: nav-icons 5.5s ease-in-out forwards;
 		 -webkit-animation: nav-icons 5.5s ease-in-out forwards;
 		 -ms-animation: nav-icons 5.5s ease-in-out forwards;
@@ -738,7 +734,6 @@ COMMENTATO PERCHE' SOSTITUITO CON TESTO INDIPENDENTE "CONTENT"
 
 	}
 			/*
-			MASSY: 
 			AGGIUNTO CARATTERE PER FOOTER
 			*/
 		#footer h5 {
@@ -1024,7 +1019,6 @@ COMMENTATO PERCHE' SOSTITUITO CON TESTO INDIPENDENTE "CONTENT"
 	@media screen and (max-width: 480px) {
 		
 		/*
-		MASSY: 
 		NIENTE FOOTER SU TEL
 		*/
 		
