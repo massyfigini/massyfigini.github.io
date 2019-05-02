@@ -739,7 +739,7 @@ COMMENTATO PERCHE' SOSTITUITO CON TESTO INDIPENDENTE "CONTENT"
 		#footer h5 {
 
 			font-size: 0.7em;
-			opacity: 0.2;
+			opacity: 0.4;
 		}
 
 /* Wide */
@@ -1022,7 +1022,7 @@ COMMENTATO PERCHE' SOSTITUITO CON TESTO INDIPENDENTE "CONTENT"
 		NIENTE FOOTER SU TEL
 		*/
 		
-		#footer h5 {
+		#footer {
 			display none;
 		}
 
