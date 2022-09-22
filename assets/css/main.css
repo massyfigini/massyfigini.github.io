@@ -1033,7 +1033,7 @@ COMMENTATO PERCHE' SOSTITUITO CON TESTO INDIPENDENTE "CONTENT"
 				/*background: #fff;
 				overflow: hidden;*/
 				height: 100%;
-				background: #000000 url("images/BackgroundNeo_Mobile.gif") bottom left;
+				background: #000000 url("images/BackgroundNeo_Mobile.gif") top left;
 				background-repeat: no-repeat;
 				background-size: cover;
 				background-position: center center;
