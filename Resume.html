@@ -1,186 +1,80 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <a href="https://massyfigini.github.io"><title>Massimiliano Figini CV</title></a>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width">
-
-  <link rel='shortcut icon' type='image/x-icon' href='https://github.com/massyfigini/massyfigini.github.io/blob/master/favicon.ico'>
-  <link rel="stylesheet" href="assetsCV/css/normalize.min.css">
-  <link rel="stylesheet" href="assetsCV/css/main.css">
-  <link rel='shortcut icon' type='image/png' href='Watchmen-smiley.png'>
-
+  <meta charset="UTF-8">
+  <title>Page Under Construction</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      overflow: hidden;
+      height: 100%;
+      font-family: monospace;
+    }
+    canvas {
+      display: block;
+    }
+    .message {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #00ff00;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px 40px;
+      border-radius: 10px;
+      text-align: center;
+      z-index: 1;
+    }
+    .message h1 {
+      margin: 0 0 10px;
+      font-size: 24px;
+    }
+    .message p {
+      margin: 0;
+      font-size: 16px;
+    }
+  </style>
 </head>
-  <body class="bg-fixed bg-1">
-<!--[if lt IE 7]>
-    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-    <![endif]-->
-   <div class="main-container">
-    <div class="main wrapper clearfix">
-      <!-- Header Start -->
-        <header id="header">
-            <div id="logo">
-                <h2>
-                    Massimiliano Figini
-                </h2>
-                <h4>
-                    Resume
-                </h4>
-            </div>
-        </header>
-        <!-- Header End -->
-        <!-- Main Tab Container -->
-        <div id="tab-container" class="tab-container">
-          <!-- Tab List -->
+<body>
+  <canvas id="matrix"></canvas>
+  <div class="message">
+    <h1>Page Under Construction</h1>
+    <p>I'm currently updating my resume page. Please check back soon!</p>
+  </div>
+  <script>
+    const canvas = document.getElementById('matrix');
+    const ctx = canvas.getContext('2d');
 
-          <!-- End Tab List -->
-            <div id="tab-data-wrap">
+    // Set canvas full screen
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
-              <!-- Resume Tab Data -->
-                <div id="resume">
-                    <section class="clearfix">
-                        <div class="g2">
-                            <h3>
-                                Experience
-                            </h3>
-                            <ul class="no-list work">
-                                <li>
-                                    <h5>
-                                        SQL Specialist
-                                    </h5><span class="label label-danger">2021-Present</span>
-                                    <p>
-                                        Consulcesi Tech, Balerna
-                                    </p>
-                                </li>   
-                                <li>
-                                    <h5>
-                                        Data Engineer
-                                    </h5><span class="label label-danger">2019-2021</span>
-                                    <p>
-                                        Reti, Busto Arsizio
-                                    </p>
-                                </li>
-                                <li>
-                                    <h5>
-                                        Business Analyst and Reporting Manager
-                                    </h5><span class="label label-info">2013-2019</span>
-                                    <p>
-                                        Vorwerk Italia, Milan
-                                    </p>
-                                </li>
-                                <li>
-                                    <h5>
-                                        Senior Business Analyst
-                                    </h5><span class="label label-info">2011-2013</span>
-                                    <p>
-                                        Logotel / Intesa Sanpaolo, Milan
-                                    </p>
-                                </li>
-                                <li>
-                                    <h5>
-                                        Data Analyst
-                                    </h5><span class="label label-info">2006-2011</span>
-                                    <p>
-                                        Cogest Retail, Milan
-                                    </p>
-                                </li>
-                            </ul>
-                            <br>
-                            <h3>
-                                Education
-                            </h3>
-                            <ul class="no-list work">
-                                <li>
-                                    <h5>
-                                        Bachelor's Degree, Business Statistics
-                                    </h5>  <!--<span class="label label-success">2003-2008</span>-->
-                                    <p>
-                                        Università degli studi di Milano Bicocca
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="g1">
-                            <div class="sidebar">
-                                <h3>
-                                    Computer Skills
-                                </h3>
-                                <h5>
-                                    Data Analysis
-                                </h5>
-                                <div class="meter carrot">
-                                  <span style="width: 99%"><span>SQL (T-SQL + PL/SQL + MySQL)</span></span>  
-                                </div>
-                                <div class="meter carrot">
-                                    <span style="width: 90%"><span>Power BI</span></span>
-                                </div>
-                                <div class="meter carrot">
-                                    <span style="width: 80%"><span>Tableau</span></span>
-                                </div>
-                                <div class="meter carrot">
-                                    <span style="width: 70%"><span>R</span></span>
-                                </div>
-                                <div class="meter carrot">
-                                    <span style="width: 50%"><span>Python</span></span>
-                                </div>
-                                <div class="meter carrot">
-                                    <span style="width: 99%"><span>Excel + VBA</span></span>
-                                </div>
-                                <div class="break"></div>
-                                <h5>
-                                    DBMS 
-                                </h5>      
-                                <div class="meter pomengrate">
-                                    <span style="width: 99%"><span>SQL Server</span></span>
-                                </div>
-                                <div class="meter pomengrate">
-                                    <span style="width: 70%"><span>Oracle</span></span>
-                                </div> 
-                                <div class="meter pomengrate">
-                                    <span style="width: 70%"><span>PostgreSQL</span></span>
-                                </div>
-                                <div class="meter pomengrate">
-                                    <span style="width: 70%"><span>MySQL</span></span>
-                                </div>
-                                <div class="meter pomengrate">
-                                    <span style="width: 99%"><span>Access + VBA</span></span>
-                                </div>
-                                <div class="break"></div>
-                                <h5>
-                                    Others
-                                </h5>
-                                <div class="meter emerald">
-                                    <span style="width: 80%"><span>Ms Azure</span></span>
-                                </div>
-                                <div class="meter emerald">
-                                    <span style="width: 70%"><span>Visual Basic</span></span>
-                                </div>
-                                <div class="meter emerald">
-                                    <span style="width: 60%"><span>HTML + CSS</span></span>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-              <!-- End Resume Tab Data -->
+    const letters = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッンABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    const fontSize = 16;
+    const columns = canvas.width / fontSize;
+    const drops = Array.from({ length: columns }, () => 1);
 
-            </div>
-        </div>
-        <!-- End Tab Container -->
-        <footer>
-            <p>
-                <a href="http://www.massimilianofigini.com">&copy; Massimiliano Figini</a> 
-            </p>
-        </footer>
-    </div><!-- #main -->
-</div><!-- #main-container -->
+    function draw() {
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+      ctx.fillStyle = '#0F0';
+      ctx.font = `${fontSize}px monospace`;
 
+      for (let i = 0; i < drops.length; i++) {
+        const text = letters.charAt(Math.floor(Math.random() * letters.length));
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+    }
+
+    setInterval(draw, 33);
+  </script>
 </body>
 </html>
