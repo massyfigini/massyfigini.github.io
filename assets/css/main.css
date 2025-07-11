@@ -1,8 +1,6 @@
 /* =====================
    Massimiliano Figini – Main stylesheet
    Last update: 2025‑06‑13
-   ‑ Keeps original behaviour, animations and responsive layout
-   ‑ Removes obsolete comments / duplicate vendor rules
    ===================== */
 
 /* --------------------------------------------------
@@ -67,10 +65,17 @@ a:hover{border-color:transparent}
 /* --------------------------------------------------
    Layout wrappers & animations
 -------------------------------------------------- */
-@keyframes wrapper{from{opacity:0}to{opacity:1}}
 #wrapper{
-  position:fixed;top:0;left:0;width:100%;height:100%;opacity:0;
-  animation:wrapper 6s forwards;
+  animation: wrapper 6s forwards;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0; top: 0;
+  opacity: 0;   
+}
+@keyframes wrapper {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 /* Background scroller */
