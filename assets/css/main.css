@@ -32,14 +32,14 @@ body,input,select,textarea{
 /* --------------------------------------------------
    Background (desktop default)
 -------------------------------------------------- */
-body{
+body {
   background:#000 url("images/BackgroundNeo.gif") bottom left no-repeat fixed;
   background-size:cover;
   overflow:hidden;
 }
 
 /* Remove all animations while loading */
-body.loading *{animation:none!important}
+.loading *{animation:none!important}
 
 /* --------------------------------------------------
    Links
@@ -153,15 +153,15 @@ a:hover{border-color:transparent}
 /* --------------------------------------------------
    Responsive adjustments
 -------------------------------------------------- */
-@media (max-width:1680px){body,input,select,textarea{font-size:13pt}}
-@media (max-width:1280px){body,input,select,textarea{font-size:12pt}}
+@media (max-width:1680px){,input,select,textarea{font-size:13pt}}
+@media (max-width:1280px){,input,select,textarea{font-size:12pt}}
 @media (max-width:736px){
-  body,input,select,textarea{font-size:11pt}
+  ,input,select,textarea{font-size:11pt}
   #header h1{font-size:2.5em}
   #header p{font-size:1em}
   #header nav a:before{font-size:1.5em}
 }
 @media (max-width:480px){
   #footer{display:none}
-  body{background:#000 url("images/BackgroundNeo_Mobile.gif") center top/cover no-repeat fixed}
+  {background:#000 url("images/BackgroundNeo_Mobile.gif") center top/cover no-repeat fixed}
 }
