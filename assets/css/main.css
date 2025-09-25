@@ -77,12 +77,13 @@ a:hover { border-color: transparent; }
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: #000 url("images/BackgroundNeo.gif") top left / cover no-repeat;
+  background: #000 url("images/BackgroundNeo.gif") -20px -20px / 90% auto no-repeat;
   pointer-events: none;
   opacity: 1;
   will-change: opacity, visibility;
   animation: splash-out 3s ease-in-out 3s forwards; /* fade after 3s */
 }
+
 @keyframes splash-out {
   from { opacity: 1; }
   to   { opacity: 0; visibility: hidden; }
@@ -198,7 +199,7 @@ a:hover { border-color: transparent; }
   top: calc(100% + 0.5em);     /* always below the circle */
   left: 50%;
   transform: translate(-50%, 4px);  /* slight slide-down (hidden state) */
-  font-size: 2rem;              /* bigger label */
+  font-size: 1.2rem;              /* bigger label */
   line-height: 1.2;
   text-align: center;
   white-space: nowrap;
