@@ -199,7 +199,7 @@ a:hover { border-color: transparent; }
   top: calc(100% + 0.5em);     /* always below the circle */
   left: 50%;
   transform: translate(-50%, 4px);  /* slight slide-down (hidden state) */
-  font-size: 1.2rem;              /* bigger label */
+  font-size: 1rem;              /* bigger label */
   line-height: 1.2;
   text-align: center;
   white-space: nowrap;
