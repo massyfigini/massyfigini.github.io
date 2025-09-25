@@ -1,17 +1,17 @@
 /* =====================
-   Main stylesheet
+   Massimiliano Figini – Main stylesheet (consolidated)
    ===================== */
 
-/* --------------------------------------------------
+/* -------------------------------------------
    Imports
--------------------------------------------------- */
+------------------------------------------- */
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
-/* fallback locale, se presente il file in assets/css/ */
+/* Optional local fallback if present */
 @import url("font-awesome.min.css");
 
-/* --------------------------------------------------
+/* -------------------------------------------
    Reset + Box model
--------------------------------------------------- */
+------------------------------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -20,14 +20,14 @@
   vertical-align: baseline;
   box-sizing: border-box;
 }
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display:block; }
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display: block; }
 html, body { height: 100%; -webkit-text-size-adjust: none; }
 ol, ul { list-style: none; }
 table { border-collapse: collapse; border-spacing: 0; }
 
-/* --------------------------------------------------
+/* -------------------------------------------
    Base typography & colors
--------------------------------------------------- */
+------------------------------------------- */
 body, input, select, textarea {
   color: #fff;
   font-family: 'Source Sans Pro', sans-serif;
@@ -37,20 +37,20 @@ body, input, select, textarea {
   line-height: 1.75em;
 }
 
-/* --------------------------------------------------
-   Background: nero fisso (la GIF è nello splash)
--------------------------------------------------- */
+/* -------------------------------------------
+   Background: keep solid black (splash shows GIF)
+------------------------------------------- */
 body {
-  background: #000;   /* fisso nero dopo lo splash */
+  background: #000;
   overflow: hidden;
 }
 
-/* Durante il loading blocca le animazioni, MA non bloccare lo splash */
+/* During loading, pause animations EXCEPT splash (so it can fade out) */
 body.loading *:not(#splash) { animation: none !important; }
 
-/* --------------------------------------------------
-   Link
--------------------------------------------------- */
+/* -------------------------------------------
+   Links
+------------------------------------------- */
 a {
   color: inherit;
   text-decoration: none;
@@ -59,9 +59,9 @@ a {
 }
 a:hover { border-color: transparent; }
 
-/* --------------------------------------------------
+/* -------------------------------------------
    Font Awesome helper
--------------------------------------------------- */
+------------------------------------------- */
 .icon { position: relative; text-decoration: none; }
 .icon:before {
   font-family: 'FontAwesome';
@@ -69,9 +69,10 @@ a:hover { border-color: transparent; }
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* --------------------------------------------------
-   SPLASH (GIF) – top-left for ~3s 
--------------------------------------------------- */
+/* -------------------------------------------
+   SPLASH (Matrix GIF) – top-left ~3s then smooth fade
+   NOTE: image path is relative to this CSS file
+------------------------------------------- */
 #splash {
   position: fixed;
   inset: 0;
@@ -80,29 +81,32 @@ a:hover { border-color: transparent; }
   pointer-events: none;
   opacity: 1;
   will-change: opacity, visibility;
-  animation: splash-out .6s ease 3s forwards; /* fade dopo 3s */
+  animation: splash-out 1.2s ease-in-out 3s forwards; /* fade after 3s */
 }
-@keyframes splash-out { to { opacity: 0; visibility: hidden; } }
+@keyframes splash-out {
+  from { opacity: 1; }
+  to   { opacity: 0; visibility: hidden; }
+}
 
-/* --------------------------------------------------
+/* -------------------------------------------
    Wrapper fade-in
--------------------------------------------------- */
+------------------------------------------- */
 #wrapper {
   position: fixed;
   inset: 0;
   width: 100%;
   height: 100%;
   opacity: 0;
-  animation: wrapper 3s forwards;  /* 3s per sincronizzarsi con lo splash */
+  animation: wrapper 3s forwards;  /* sync with splash timing */
 }
 @keyframes wrapper { 0% { opacity: 0; } 100% { opacity: 1; } }
 
-/* Se hai un vecchio #bg del tema, disattivalo per non interferire */
+/* If the old theme had a moving #bg, disable it to avoid interference */
 #bg { display: none; }
 
-/* --------------------------------------------------
-   Main
--------------------------------------------------- */
+/* -------------------------------------------
+   Main layout (centered content)
+------------------------------------------- */
 #main {
   position: fixed;
   inset: 0;
@@ -113,9 +117,9 @@ a:hover { border-color: transparent; }
   text-align: center;
 }
 
-/* --------------------------------------------------
-   Header + titles
--------------------------------------------------- */
+/* -------------------------------------------
+   Header + headings
+------------------------------------------- */
 #header { width: 90%; max-width: 900px; }
 #header h1 {
   font-size: 4.35em;
@@ -128,9 +132,9 @@ a:hover { border-color: transparent; }
   line-height: 1.4;
 }
 
-/* --------------------------------------------------
-   Nav icons
--------------------------------------------------- */
+/* -------------------------------------------
+   Nav icons: original circle size + labels on hover (below)
+------------------------------------------- */
 #header nav { margin: 1.5em 0 0; }
 
 #header nav ul {
@@ -144,9 +148,9 @@ a:hover { border-color: transparent; }
 
 #header nav li {
   list-style: none;
-  width: 5.35em;          /* contenitore come in origine */
+  width: 5.35em;          /* original container size */
   height: 5.35em;
-  line-height: 5.885em;   /* centratura verticale “storica” */
+  line-height: 5.885em;   /* original vertical rhythm */
   position: relative;
 }
 
@@ -159,16 +163,20 @@ a:hover { border-color: transparent; }
   text-decoration: none;
 }
 
+/* IMPORTANT:
+   Do NOT set content here; Font Awesome sets it via .fa-XYZ:before.
+   Here we only style the pseudo-element so it becomes a circle frame
+   with the FA glyph centered inside. */
 #header nav a:before {
-  /* niente content qui! */
+  /* no content here! */
   display: block;
   width: 2.5em;
   height: 2.5em;
   line-height: 2.5em;
-  font-size: 1.75em;     /* dimensione icona FA dentro il cerchio */
+  font-size: 1.75em;        /* FA glyph size */
   margin: 0 auto;
   text-align: center;
-  border: 1px solid #fff;     /* cerchio */
+  border: 1px solid #fff;   /* circle */
   border-radius: 50%;
   transition: background .2s ease;
   position: relative;
@@ -178,24 +186,37 @@ a:hover { border-color: transparent; }
 #header nav a:hover:before { background: rgba(255, 255, 255, 0.175); }
 #header nav a:active:before { background: rgba(255, 255, 255, 0.35); }
 
-/* LABEL: only hover (desktop) */
+/* Labels: hidden by default, appear BELOW the circle on hover (desktop) */
 #header nav a .label {
-  display: none !important;
+  display: block;              /* exists in DOM */
   position: absolute;
   left: 0; right: 0;
-  bottom: -1.75em;
-  font-size: 0.75em;
+  bottom: -1.8em;              /* place below circle */
+  font-size: 0.95rem;          /* slightly bigger */
+  line-height: 1.2;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(4px);
+  transition: opacity .25s ease, transform .25s ease, visibility 0s linear .25s;
 }
+
 @media (hover:hover) {
-  #header nav a:hover .label { display: inline !important; }
+  #header nav a:hover .label {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity .25s ease, transform .25s ease, visibility 0s;
+  }
 }
+
+/* On touch devices (no hover), keep labels hidden */
 @media (hover:none) {
   #header nav a .label { display: none !important; }
 }
 
-/* --------------------------------------------------
+/* -------------------------------------------
    Footer
--------------------------------------------------- */
+------------------------------------------- */
 #footer {
   position: absolute;
   bottom: 0;
@@ -205,9 +226,9 @@ a:hover { border-color: transparent; }
 }
 #footer h5 { font-size: .7em; opacity: .4; margin: 0; }
 
-/* --------------------------------------------------
+/* -------------------------------------------
    Responsive
--------------------------------------------------- */
+------------------------------------------- */
 @media (max-width: 1680px) {
   body, input, select, textarea { font-size: 13pt; }
 }
@@ -218,7 +239,7 @@ a:hover { border-color: transparent; }
   body, input, select, textarea { font-size: 11pt; }
   #header h1 { font-size: 2.5em; }
   #header p { font-size: 1em; }
-  /* icona leggermente più piccola dentro il cerchio su mobile */
+  /* slightly smaller FA glyph inside circle */
   #header nav a:before {
     font-size: 1.5em;
     width: 2.5em;
@@ -229,4 +250,3 @@ a:hover { border-color: transparent; }
 @media (max-width: 480px) {
   #footer { display: none; }
 }
-
