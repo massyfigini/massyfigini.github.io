@@ -187,24 +187,32 @@ a:hover { border-color: transparent; }
 #header nav a:active:before { background: rgba(255, 255, 255, 0.35); }
 
 /* Labels: hidden by default, appear BELOW the circle on hover (desktop) */
+#header nav a {
+  position: relative;
+  overflow: visible; /* allow label to sit outside the icon box */
+}
+
 #header nav a .label {
-  display: block;              /* exists in DOM */
+  display: block;
   position: absolute;
-  left: 0; right: 0;
-  bottom: -1.8em;              /* place below circle */
-  font-size: 0.95rem;          /* slightly bigger */
+  top: calc(100% + 0.5em);     /* always below the circle */
+  left: 50%;
+  transform: translate(-50%, 4px);  /* slight slide-down (hidden state) */
+  font-size: 1rem;              /* bigger label */
   line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(4px);
   transition: opacity .25s ease, transform .25s ease, visibility 0s linear .25s;
+  pointer-events: none;         /* avoid hover flicker when passing over text */
 }
 
 @media (hover:hover) {
   #header nav a:hover .label {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    transform: translate(-50%, 0); /* slide-up into place */
     transition: opacity .25s ease, transform .25s ease, visibility 0s;
   }
 }
