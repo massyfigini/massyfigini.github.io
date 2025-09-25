@@ -43,17 +43,18 @@ body{
   position:fixed;
   inset:0;
   z-index:9999;
-  background:#000 url("images/BackgroundNeo.gif") center/cover no-repeat;
+  background:#000 url("images/BackgroundNeo.gif") top left / cover no-repeat; /* alto-sinistra */
   pointer-events:none;
   opacity:1;
-  animation:splash-out .6s ease 3s forwards; /* fade dopo 3s */
+  will-change: opacity, visibility;
+  animation: splash-out .6s ease 3s forwards; /* fade dopo 3s */
 }
+
+body.loading *:not(#splash){ animation: none !important; }
 
 @keyframes splash-out{
-  to{ opacity:0; visibility:hidden; }
+  to { opacity:0; visibility:hidden; }
 }
-
-body.loading *:not(#splash){animation:none!important}
 
 /* --------------------------------------------------
    Links
@@ -145,19 +146,43 @@ a:hover{border-color:transparent}
   display:inline-block;width:100%;height:100%;border:0;position:relative;
 }
 
-#header nav a:before{
-  /* niente content qui! */
-  display:block;
-  width:2.5em;height:2.5em;line-height:2.5em;
-  border:1px solid #fff;border-radius:50%;
-  text-align:center;font-size:1.75em;
-  transition:all .2s ease;margin:0 auto;
+/* la glyph Font Awesome resta su :before (gestita da FA) */
+.icon:before{
+  font-family:'FontAwesome';
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+
+  /* dimensioni/centratura glyph */
+  display:inline-block;
+  width:2.5em;
+  line-height:2.5em;
+  font-size:1.75em;
+  position:relative;
+  z-index:1;
 }
 
-#header nav a:hover:before{background:rgba(255,255,255,.175)}
-#header nav a:active:before{background:rgba(255,255,255,.35)}
-#header nav a span{display:none}
-@media (hover:hover){#header nav a:hover span{display:inline;position:absolute;bottom:-1.75em;width:100%;font-size:.75em}}
+#header nav a{
+  position:relative;
+  display:inline-block;
+  width:100%;
+  height:100%;
+  border:0;
+}
+#header nav a:after{
+  content:"";
+  position:absolute;
+  left:50%; top:50%;
+  width:2.5em; height:2.5em;
+  margin-left:-1.25em; margin-top:-1.25em;
+  border:1px solid #fff;
+  border-radius:50%;
+  transition: background .2s ease;
+  z-index:0; /* sotto la glyph */
+}
+/* hover/active sul cerchio */
+#header nav a:hover:after{ background:rgba(255,255,255,.175); }
+#header nav a:active:after{ background:rgba(255,255,255,.35); }
+
 
 /* --------------------------------------------------
    Footer
