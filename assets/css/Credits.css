@@ -63,14 +63,8 @@
 	}
 
 	body {
-		/*background: #fff;
-		overflow: hidden;*/
-		height: 100%;
-		background: #000000 url("images/darkgreen.jpg") bottom left;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center center;
-		background-attachment: fixed;
+  		background: #000;
+		overflow: hidden;
 	}
 
 		body.loading * {
