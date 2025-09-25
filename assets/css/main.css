@@ -259,3 +259,28 @@ a:hover { border-color: transparent; }
 @media (max-width: 480px) {
   #footer { display: none; }
 }
+
+/* --- Mobile tweaks ------------------------------------------------------ */
+
+/* 1) Mobile splash uses the mobile GIF, top-left, native size (no scaling) */
+@media (max-width: 736px) {
+  #splash {
+    background: #000 url("images/BackgroundNeo_Mobile.gif") left top no-repeat;
+    background-size: auto; /* keep the GIF's own size */
+  }
+}
+
+/* 2) Never show labels on mobile (robust: both hover-none and width) */
+@media (hover: none), (max-width: 736px) {
+  #header nav a .label {
+    display: none !important;
+  }
+}
+
+/* 3) Prevent any stray second circle (if a legacy ::after exists) */
+#header nav a::after {
+  content: none !important;
+  border: 0 !important;
+  background: none !important;
+}
+
