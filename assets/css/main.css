@@ -83,7 +83,6 @@ a:hover { border-color: transparent; }
   will-change: opacity, visibility;
   animation: splash-out 1.5s ease-in-out 2s forwards; /* fade after 2s */
 }
-
 @keyframes splash-out {
   from { opacity: 1; }
   to   { opacity: 0; visibility: hidden; }
@@ -171,13 +170,13 @@ a:hover { border-color: transparent; }
 #header nav a:before {
   /* no content here! */
   display: block;
-  width: 2.5em;
+  width: 2.5em;           /* circle size (constant across viewports) */
   height: 2.5em;
   line-height: 2.5em;
-  font-size: 1.75em;        /* FA glyph size */
+  font-size: 1.75em;      /* FA glyph size (constant across viewports) */
   margin: 0 auto;
   text-align: center;
-  border: 1px solid #fff;   /* circle */
+  border: 1px solid #fff; /* circle outline */
   border-radius: 50%;
   transition: background .2s ease;
   position: relative;
@@ -187,40 +186,33 @@ a:hover { border-color: transparent; }
 #header nav a:hover:before { background: rgba(255, 255, 255, 0.175); }
 #header nav a:active:before { background: rgba(255, 255, 255, 0.35); }
 
-/* Labels: hidden by default, appear BELOW the circle on hover (desktop) */
+/* Labels below circle, only on hover (desktop) */
 #header nav a {
   position: relative;
-  overflow: visible; /* allow label to sit outside the icon box */
+  overflow: visible; /* allow label below the circle */
 }
-
 #header nav a .label {
   display: block;
   position: absolute;
   top: calc(100% + 0.5em);     /* always below the circle */
   left: 50%;
-  transform: translate(-50%, 4px);  /* slight slide-down (hidden state) */
-  font-size: 1rem;              /* bigger label */
+  transform: translate(-50%, 4px);  /* hidden state: slight slide down */
+  font-size: 1rem;
   line-height: 1.2;
   text-align: center;
   white-space: nowrap;
   opacity: 0;
   visibility: hidden;
   transition: opacity .25s ease, transform .25s ease, visibility 0s linear .25s;
-  pointer-events: none;         /* avoid hover flicker when passing over text */
+  pointer-events: none;         /* avoid hover flicker */
 }
-
 @media (hover:hover) {
   #header nav a:hover .label {
     opacity: 1;
     visibility: visible;
-    transform: translate(-50%, 0); /* slide-up into place */
+    transform: translate(-50%, 0);
     transition: opacity .25s ease, transform .25s ease, visibility 0s;
   }
-}
-
-/* On touch devices (no hover), keep labels hidden */
-@media (hover:none) {
-  #header nav a .label { display: none !important; }
 }
 
 /* -------------------------------------------
@@ -248,19 +240,15 @@ a:hover { border-color: transparent; }
   body, input, select, textarea { font-size: 11pt; }
   #header h1 { font-size: 2.5em; }
   #header p { font-size: 1em; }
-  /* slightly smaller FA glyph inside circle */
-  #header nav a:before {
-    font-size: 1.5em;
-    width: 2.5em;
-    height: 2.5em;
-    line-height: 2.5em;
-  }
+  /* keep circles unchanged on mobile (no resizing here) */
 }
 @media (max-width: 480px) {
   #footer { display: none; }
 }
 
-/* --- Mobile tweaks ------------------------------------------------------ */
+/* -------------------------------------------
+   Mobile tweaks
+------------------------------------------- */
 
 /* 1) Mobile splash uses the mobile GIF, top-left, native size (no scaling) */
 @media (max-width: 736px) {
@@ -277,10 +265,9 @@ a:hover { border-color: transparent; }
   }
 }
 
-/* 3) Prevent any stray second circle (if a legacy ::after exists) */
+/* 3) Prevent any stray second circle from legacy styles */
 #header nav a::after {
   content: none !important;
   border: 0 !important;
   background: none !important;
 }
-
