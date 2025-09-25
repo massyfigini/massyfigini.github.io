@@ -77,7 +77,7 @@ a:hover { border-color: transparent; }
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: #000 url("images/BackgroundNeo.gif") -20px -20px / 90% auto no-repeat;
+  background: #000 url("images/BackgroundNeo.gif") -200px -200px / 80% auto no-repeat;
   pointer-events: none;
   opacity: 1;
   will-change: opacity, visibility;
