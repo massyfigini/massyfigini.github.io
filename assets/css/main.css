@@ -131,7 +131,8 @@ a:hover{border-color:transparent}
   display:inline-block;width:100%;height:100%;border:0;position:relative;
 }
 #header nav a:before{
-  content:"";display:block;width:2.5em;height:2.5em;line-height:2.5em;
+  display:block;
+  width:2.5em;height:2.5em;line-height:2.5em;
   border:1px solid #fff;border-radius:50%;text-align:center;font-size:1.75em;
   transition:all .2s ease;
   margin:0 auto;
@@ -153,14 +154,15 @@ a:hover{border-color:transparent}
 /* --------------------------------------------------
    Responsive adjustments
 -------------------------------------------------- */
-@media (max-width:1680px){,input,select,textarea{font-size:13pt}}
-@media (max-width:1280px){,input,select,textarea{font-size:12pt}}
+@media (max-width:1680px){ body,input,select,textarea{font-size:13pt} }
+@media (max-width:1280px){ body,input,select,textarea{font-size:12pt} }
 @media (max-width:736px){
-  ,input,select,textarea{font-size:11pt}
+  body,input,select,textarea{font-size:11pt}
   #header h1{font-size:2.5em}
   #header p{font-size:1em}
   #header nav a:before{font-size:1.5em}
 }
+
 @media (max-width:480px){
   #footer{display:none}
   {background:#000 url("images/BackgroundNeo_Mobile.gif") center top/cover no-repeat fixed}
