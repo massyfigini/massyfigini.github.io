@@ -81,7 +81,7 @@ a:hover { border-color: transparent; }
   pointer-events: none;
   opacity: 1;
   will-change: opacity, visibility;
-  animation: splash-out 2s ease-in-out 2s forwards; /* fade after 2s */
+  animation: splash-out 1.5s ease-in-out 2s forwards; /* fade after 2s */
 }
 
 @keyframes splash-out {
