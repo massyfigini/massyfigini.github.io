@@ -70,7 +70,7 @@ a:hover { border-color: transparent; }
 }
 
 /* -------------------------------------------
-   SPLASH (Matrix GIF) – top-left ~3s then smooth fade
+   SPLASH (Matrix GIF) – top-left ~2s then smooth fade
    NOTE: image path is relative to this CSS file
 ------------------------------------------- */
 #splash {
@@ -81,7 +81,7 @@ a:hover { border-color: transparent; }
   pointer-events: none;
   opacity: 1;
   will-change: opacity, visibility;
-  animation: splash-out 3s ease-in-out 3s forwards; /* fade after 3s */
+  animation: splash-out 2s ease-in-out 2s forwards; /* fade after 2s */
 }
 
 @keyframes splash-out {
@@ -98,7 +98,7 @@ a:hover { border-color: transparent; }
   width: 100%;
   height: 100%;
   opacity: 0;
-  animation: wrapper 3s forwards;  /* sync with splash timing */
+  animation: wrapper 2s forwards;  /* sync with splash timing */
 }
 @keyframes wrapper { 0% { opacity: 0; } 100% { opacity: 1; } }
 
