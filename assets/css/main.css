@@ -41,7 +41,7 @@ body, input, select, textarea {
    Background: keep solid black (splash shows GIF)
 ------------------------------------------- */
 body {
-  background: #FF8800;
+  background: #000;
   overflow: hidden;
 }
 
